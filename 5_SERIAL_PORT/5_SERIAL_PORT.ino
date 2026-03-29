@@ -1,3 +1,7 @@
+// complete chap 5 and learn variables and print 
+
+
+
 int j = 1;
 String nString = " j = ";
 void setup() {
