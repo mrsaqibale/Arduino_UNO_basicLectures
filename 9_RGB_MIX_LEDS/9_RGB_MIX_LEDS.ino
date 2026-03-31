@@ -14,12 +14,14 @@ void setup() {
 }
 
 void loop() {
- if ( v1 > 253 || v2 > 253 || v3 > 253){
+
+  if( v1 != 248){ v1  = v1 +8 ;}
+  else if ( v1 == 248  && v2 != 248 ){ v2 = v2 +8; }
+  else { v3 = v3 + 8 ; }
+ if ( v1 == 248 && v2 == 248 && v3 == 248){
   v1 = v2 = v3 = 0;
  }
- v1 = v1 + 8; 
- v2 = v2 + 8; 
- v3 = v3 + 8;
+ 
  Serial.println(v1);
  analogWrite(blue , v1);
  analogWrite(green, v2);
